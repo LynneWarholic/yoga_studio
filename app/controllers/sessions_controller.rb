@@ -5,22 +5,27 @@ class SessionsController < ApplicationController
   # GET /sessions.json
   def index
     @sessions = Session.all
+    # @styles = Style.all
+    # @instructors = Instructor.all
   end
 
   # GET /sessions/1
   # GET /sessions/1.json
   def show
+    
   end
 
   # GET /sessions/new
   def new
     @session = Session.new
-    @instructor = Instructor.all
+    @instructors = Instructor.all
+    @styles = Style.all
   end
 
   # GET /sessions/1/edit
   def edit
-    @instructor = Instructor.all
+    @instructors = Instructor.all
+    @styles = Style.all
   end
 
   # POST /sessions
@@ -71,6 +76,6 @@ class SessionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def session_params
-      params.require(:session).permit(:style, :occurs_at, :difficulty, :duration, :instructor_id)
+      params.require(:session).permit(:style_id, :style, :occurs_at, :difficulty, :duration, :instructor_id)
     end
 end

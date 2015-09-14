@@ -12,6 +12,10 @@
   <% end %>
 
  
+ <div class="field">
+    <%= f.label :style2 %><br>
+    <%= f.collection_select :style_id, @styles, :id, :name %>
+  </div>
   <div class="field">
     <%= f.label :style %><br>
     <%= f.text_field :style %>
@@ -30,7 +34,7 @@
   </div>
   <div class="field">
     <%= f.label :instructor %><br>
-    <%= f.collection_select :instructor,  Instructor.all, :id, :name %>
+    <%= f.collection_select :instructor_id, @instructors, :id, :name %>
   </div>
   <div class="actions">
     <%= f.submit %>

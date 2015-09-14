@@ -3,6 +3,11 @@
 
 
 <p>
+  <strong>Style2:</strong>
+  <%= @session.style_id %>
+</p>
+
+<p>
   <strong>Style:</strong>
   <%= @session.style %>
 </p>
@@ -24,7 +29,7 @@
 
 <p>
   <strong>Instructor:</strong>
-  <%= @session.instructor.name %>
+  <%= @session.instructor_id %>
 </p>
 
 <%= link_to 'Edit', edit_session_path(@session) %> |
