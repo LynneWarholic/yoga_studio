@@ -5,8 +5,7 @@ class SessionsController < ApplicationController
   # GET /sessions.json
   def index
     @sessions = Session.all
-    # @styles = Style.all
-    # @instructors = Instructor.all
+    
   end
 
   # GET /sessions/1
@@ -76,6 +75,6 @@ class SessionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def session_params
-      params.require(:session).permit(:style_id, :style, :occurs_at, :difficulty, :duration, :instructor_id)
+      params.require(:session).permit(:style_id, :occurs_at, :difficulty, :duration, :instructor_id)
     end
 end
